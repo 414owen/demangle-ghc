@@ -181,7 +181,7 @@
   run();
   inputEl.addEventListener("input", run);
   examplesEl.addEventListener("change", function() {
-    inputEl.value = examplesEl.value;
+    inputEl.value = examplesEl.value.replaceAll('\\n', '\n');
     run();
   });
 })();
