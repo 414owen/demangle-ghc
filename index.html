@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://www.haskell.org/img/favicon.ico" rel="icon">
+<link rel="stylesheet" type="text/css" href="./demangle.css">
+</head>
+<body>
+
+<div class="demangle-ghc io-tool">
+  <div class="tool-input-container">
+    <textarea id="ghc-input" class="tool-input">
+      multizmexceptzm2zi0zi0zminplace_ControlziApplicativeziMultiExcept_zdtczqSuccess3_bytes
+    </textarea>
+  </div>
+  <div class="tool-output-container">
+    <pre id="ghc-output" class="tool-output">
+    </pre>
+  </div>
+  <div class="tool-arrow" style="font-size: 140px">&#10552;</div>
+</div>
+
+Examples: <select id="demangle-ghc-examples">
+  <option value="multizmexceptzm2zi0zi0zminplace_ControlziApplicativeziMultiExcept_zdtczqSuccess3_bytes">multi-except</option>
+  <option value="ghczmprim_GHCziTypes_ZMZN_closure">(,)</option>
+  <option value="base_GHCziBase_ZCzb_con_info">:|</option>
+  <option value="ghczmprim_GHCziTupleziPrim_Z10T_con_info">Big ( tuple )</option>
+  <option value="ghczmprim_GHCziTupleziPrim_Z10H_con_info">Big (# tuple #)</option>
+</select>
+
+<p>
+I find a good way of getting some test data is by using something like this:
+<pre>
+readelf --wide -a SOME_HS_LIB | grep -E '^ +[0-9]+' | grep -E -v '\.' | awk '{print $8}'
+
+</pre>
+</p>
+
+<script src="./demangle.js"></script>
+</body>
+</html>

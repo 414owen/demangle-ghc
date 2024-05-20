@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  resize: none;
+  box-sizing: border-box;
+}
+html, body {
+  background: #111;
+  color: #eee;
+}
+body {
+  padding: 24px;
+}
+.tool-input-container {
+  padding-bottom: 10px;
+  grid-column: 1;
+  grid-row: 1;
+}
+.tool-output-container {
+  padding-top: 10px;
+  grid-column: 1;
+  grid-row: 2;
+}
+.tool-input {
+  background: #453a62;
+}
+.tool-output {
+  background: #5e5086;
+}
+.tool-arrow {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+.tool-input-container, .tool-output-container {
+  height: 100%;
+}
+.tool-input, .tool-output {
+  padding: 10px;
+  overflow: scroll;
+  font-size: 16px;
+  color: #eee;
+  height: 100%;
+  width: 100%;
+}
+select {
+  padding: 8px;
+  margin-bottom: 24px;
+}
+.demangle-ghc {
+  display: grid;
+  grid-template-columns: 600px auto;
+  grid-template-rows: 50% 50%;
+  height: 600px;
+  max-height: 600%;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+}
