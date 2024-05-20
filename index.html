@@ -6,6 +6,19 @@
 </head>
 <body>
 
+<h1>GHC symbol name demangler</h1>
+
+<br/>
+
+<p>
+This tool demangles symbol names that GHC produces, as per <a href="https://gitlab.haskell.org/ghc/ghc/-/wikis/commentary/compiler/symbol-names">this spec</a>.
+</p>
+<p>
+This can be useful if you're inspecting haskell object files, etc.
+</p>
+
+<br/>
+
 <div class="demangle-ghc io-tool">
   <div class="tool-input-container">
     <textarea id="ghc-input" class="tool-input">
@@ -31,7 +44,6 @@ Examples: <select id="demangle-ghc-examples">
 I find a good way of getting some test data is by using something like this:
 <pre>
 readelf --wide -a SOME_HS_LIB | grep -E '^ +[0-9]+' | grep -E -v '\.' | awk '{print $8}'
-
 </pre>
 </p>
 

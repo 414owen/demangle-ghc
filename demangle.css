@@ -8,6 +8,7 @@
 html, body {
   background: #111;
   color: #eee;
+  font-family: Sans, sans-serif;
 }
 body {
   padding: 24px;
