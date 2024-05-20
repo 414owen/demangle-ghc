@@ -66,7 +66,7 @@
       push(end);
     }
 
-    while (index < input.length && !haveErrored) {
+    while (index <= input.length && !haveErrored) {
       switch (peek()) {
         case 'z':
           advance();
