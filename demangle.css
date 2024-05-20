@@ -48,7 +48,7 @@ select {
   padding: 8px;
   margin-bottom: 24px;
 }
-.demangle-ghc {
+.io-tool {
   display: grid;
   grid-template-columns: 600px auto;
   grid-template-rows: 50% 50%;
