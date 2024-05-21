@@ -29,6 +29,9 @@ body {
 .tool-output {
   background: #5e5086;
 }
+.tool-output.error {
+  background: #c33;
+}
 .tool-arrow {
   grid-column: 2;
   grid-row: 1 / span 2;
