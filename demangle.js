@@ -1,4 +1,4 @@
-(function(input) {
+(function() {
   var inputEl = document.getElementById("ghc-input");
   var outputEl = document.getElementById("ghc-output");
   var examplesEl = document.getElementById("demangle-ghc-examples");
@@ -177,6 +177,11 @@
     var res = output.join("");
     console.log("Decoded value to: ", res.slice(0, 100), "...");
     outputEl.textContent = res;
+    if (haveErrored) {
+      outputEl.classList.add("error");
+    } else {
+      outputEl.classList.remove("error");
+    }
   }
   run();
   inputEl.addEventListener("input", run);
