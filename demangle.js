@@ -37,8 +37,8 @@
         [ "Error: ", msg, ".\n"
         , "This probably means your input isn't valid ghc-encoding.\n"
         , "\n"
-        , "If you think this is a bug in the online decoder you're using\n"
-        , "Please submit an issue at:\n"
+        , "If you think this is a bug in the online decoder you're using,\n"
+        , "please submit an issue at:\n"
         , "https://github.com/414owen/demangle-ghc/issues"
         ];
       haveErrored = true;
